@@ -6,7 +6,7 @@ export default function CarouselImage({ text,alt }) {
       className="d-block w-100"
       src={text}
       alt={alt}
-      style={{ height: "600px", objectFit: "cover" }}
-    />
+      style={{ height: "100vh", objectFit: "fill" }}
+    />   
   );
 }

@@ -2,6 +2,11 @@ import React from 'react'
 import HeaderBar from './HeaderBar'
 import MyNavbar from './MyNavbar'
 import HeroCarousel from './HeroCarousel'
+import Footer from './Footer'
+import FeatureSection from './FeatureSection'
+import HistorySection from './HistorySection'
+import NewArrivalsSection from './NewArrivalsSection'
+import CountdownSection from './CountdownSection'
 
 export default function Landing() {
   return (
@@ -13,6 +18,11 @@ export default function Landing() {
         <div style={{position:"relative"}}>
         <HeroCarousel/>
         </div>
+        <NewArrivalsSection/>
+        <CountdownSection/>
+        <HistorySection/>
+        <FeatureSection/>
+        <Footer/>
     </div>
   )
 }
