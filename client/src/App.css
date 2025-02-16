@@ -52,3 +52,37 @@ table {
 .mar-reset{
   margin: 0px
 }
+
+  
+
+.custom-indicators {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	position: absolute;
+	top: 570px;
+}
+
+.dot {
+	width: 6px;
+	height: 6px;
+	margin: 0 5px;
+	background-color: rgb(187, 193, 200);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+  
+.dot.medium {
+	width: 8px;
+	height: 8px;
+	background-color: rgb(187, 193, 200);
+}
+
+.dot.large {
+	width: 10px;
+	height: 10px;
+	background-color: rgb(192, 187, 177);
+}

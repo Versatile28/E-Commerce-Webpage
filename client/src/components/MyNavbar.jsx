@@ -39,13 +39,13 @@ export default function MyNavbar() {
               <NavDropdown.Item href="#">French</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex me-5" style={{backgroundColor:"rgb(240, 235, 223)"}}>
+          <Form className="d-flex me-5">
             <Form.Control
               type="search"
               placeholder="Search"
               className="me-auto"
               aria-label="Search"
-              style={{ fontWeight: '500', border: "none", borderRadius: "0", borderBottom: "1px black solid", backgroundColor:"rgb(240, 235, 223)", outline: "none"}}
+              style={{ fontWeight: '500', border: "none", borderRadius: "0", borderBottom: "1px black solid", backgroundColor:"rgb(240, 235, 223,0)", outline: "none"}}
             />
           </Form>
         </Navbar.Collapse>

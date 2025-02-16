@@ -5,10 +5,14 @@ import HeroCarousel from './HeroCarousel'
 
 export default function Landing() {
   return (
-    <div style={{height:"100vh", backgroundColor:"rgb(240, 235, 223)"}}>
+    <div>
+        <div style={{position:"absolute",width:'100vw', zIndex:"1"}}>
         <HeaderBar/>
         <MyNavbar/>
+        </div>
+        <div style={{position:"relative"}}>
         <HeroCarousel/>
+        </div>
     </div>
   )
 }
