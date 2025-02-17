@@ -9,7 +9,7 @@ export default function MyNavbar() {
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" style={{zIndex:'1000'}}>
       <Container>
         <Navbar.Brand href="/">Varkala</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">

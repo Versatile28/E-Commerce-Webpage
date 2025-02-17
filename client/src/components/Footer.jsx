@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap';
-import { Envelope } from 'react-bootstrap-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {

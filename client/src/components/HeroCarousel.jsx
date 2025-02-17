@@ -22,50 +22,57 @@ export default function HeroCarousel() {
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect} indicators={false}>
         <Carousel.Item interval={5000}>
-          <CarouselImage text={images[0].src} alt="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
+          <div className='slide-container first-slide carousel-image'>
+          <div className='slide-caption' style={{alignItems:"start"}}>
+            <h3 className='slide-highlight'>OUR ALL-TIME FAVOURITES</h3>
+            <h1 className='slide-title'>Blouses & Tops</h1>
+            <p className='slide-desc'>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit</p>
+            <button className='slide-btn'>DISCOVER MORE</button>
+          </div>
+          <div className='slide-caption'></div>
+          </div>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
-          <CarouselImage text={images[1].src} alt="Second slide" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
+          <div className='slide-container second-slide carousel-image d-flex justify-content-center'>
+          <div className='d-flex justify-content-center flex-column align-items-center' style={{width:"40%"}}>
+            <h3 className='slide-highlight'>BLUE & WHITE</h3>
+            <h1 className='slide-title' style={{textAlign:"center"}}>Linen and denim</h1>
+            <button className='slide-btn'>START SHOPPING</button>
+          </div>
+          </div>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
-          <CarouselImage text={images[2].src} alt="Third slide" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
+          <div className='slide-container third-slide carousel-image'>
+          <div className='slide-caption'></div>
+          <div className='slide-caption' style={{alignItems:"start"}}>
+            <h3 className='slide-highlight'>SNEAKERS</h3>
+            <h1 className='slide-title'>For every occassion</h1>
+            <button className='slide-btn'>START SHOPPING</button>
+          </div>
+          </div>
         </Carousel.Item>
       </Carousel>
       <div className="custom-indicators">
-          {images.map((image, i) => {
-            let size = "small";
+        {images.map((image, i) => {
+          let size = "small";
 
-            if (i === index) {
-              size = "large";
-            } else if ((index === 0 && i === images.length - 1) || (index === images.length - 1 && i === 0)) {
-              size = "small";
-            } else {
-              size = "medium";
-            }
+          if (i === index) {
+            size = "large";
+          } else if ((index === 0 && i === images.length - 1) || (index === images.length - 1 && i === 0)) {
+            size = "small";
+          } else {
+            size = "medium";
+          }
 
-            return (
-              <span
-                key={i}
-                className={`dot ${size}`}
-                onClick={() => setIndex(i)}
-              ></span>
-            );
-          })}
-        </div>
+          return (
+            <span
+              key={i}
+              className={`dot ${size}`}
+              onClick={() => setIndex(i)}
+            ></span>
+          );
+        })}
+      </div>
     </div>
   )
 }

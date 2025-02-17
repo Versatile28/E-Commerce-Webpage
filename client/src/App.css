@@ -60,7 +60,90 @@ table {
   margin: 0px
 }
 
-  
+/* HeroCarousel */
+
+.carousel-image{
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: 37.5rem;
+  width: 100%;
+}
+
+.first-slide{
+  background-image: url("../public/images/home-1-plain.webp");
+}
+
+.second-slide{
+  background-image: url("../public/images/home-2-plain.webp");
+}
+
+.third-slide{
+  background-image: url("../public/images/home-3-plain.webp");
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+  width: 10%;
+  height: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+
+.slide-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100vw;
+}
+
+.slide-caption{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 5rem;
+}
+
+.slide-highlight{
+  font-family: var(--bs-font-monospace);
+  color: black;
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+}
+
+.slide-title{
+  font-family: var(--bs-font-monospace);
+  color: black;
+  letter-spacing: .1rem;
+  font-size: 5rem;
+  text-align: start;
+}
+
+.slide-desc{
+  font-size: 1rem;
+  color: rgb(134,142,153);
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: start;
+}
+
+.slide-btn{
+  padding: .5rem 1.2rem;
+  border: 1px solid black;
+  border-radius: 0;
+  font-family: var(--bs-font-monospace);
+  letter-spacing: .2rem;
+  color: white;
+  background-color: black;
+  font-weight: 900;
+}
+
+.slide-btn:hover{
+  background-color: rgb(33, 33, 33);
+}
 
 .custom-indicators {
 	width: 100vw;
@@ -128,7 +211,6 @@ table {
 
  .deal-section .deal-info{
    height: 30rem;
-   width: 76%;
  }
 
  .deal-section p{
@@ -160,11 +242,10 @@ table {
  
  .countdown-box {
    display: flex;
-   justify-content: center;
+   justify-content: space-evenly;
    align-items: center;
    background-color: #ffffff;
-   padding: 1.6rem 5rem;
-   gap: 4rem;
+   padding: 1.6rem 3.5rem;
    box-shadow: 0 0 15px rgb(205, 205, 205);
  }
 
@@ -332,8 +413,9 @@ table {
    transition: color 0.3s;
  }
  
+
  .footer-bottom span:hover {
-   text-decoration: underline;
+  text-decoration: underline;
  }
  
  .text-muted {
