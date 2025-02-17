@@ -7,6 +7,7 @@ import FeatureSection from './FeatureSection'
 import HistorySection from './HistorySection'
 import NewArrivalsSection from './NewArrivalsSection'
 import CountdownSection from './CountdownSection'
+import CatagorySection from './CatagorySection'
 
 export default function Landing() {
   return (
@@ -18,6 +19,7 @@ export default function Landing() {
         <div style={{position:"relative"}}>
         <HeroCarousel/>
         </div>
+        <CatagorySection/>
         <NewArrivalsSection/>
         <CountdownSection/>
         <HistorySection/>
