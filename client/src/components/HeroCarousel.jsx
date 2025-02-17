@@ -1,6 +1,5 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import CarouselImage from './CarouselImage';
 import { useState } from 'react';
 
 const images = [
@@ -24,9 +23,9 @@ export default function HeroCarousel() {
         <Carousel.Item interval={5000}>
           <div className='slide-container first-slide carousel-image'>
           <div className='slide-caption' style={{alignItems:"start"}}>
-            <h3 className='slide-highlight'>OUR ALL-TIME FAVOURITES</h3>
-            <h1 className='slide-title'>Blouses & Tops</h1>
-            <p className='slide-desc'>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit</p>
+            <h3 className='slide-highlight mt-5 mb-3'>OUR ALL-TIME FAVOURITES</h3>
+            <h1 className='slide-title mb-4'>Blouses & Tops</h1>
+            <p className='slide-desc mb-5'>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit</p>
             <button className='slide-btn'>DISCOVER MORE</button>
           </div>
           <div className='slide-caption'></div>
@@ -35,18 +34,18 @@ export default function HeroCarousel() {
         <Carousel.Item interval={5000}>
           <div className='slide-container second-slide carousel-image d-flex justify-content-center'>
           <div className='d-flex justify-content-center flex-column align-items-center' style={{width:"40%"}}>
-            <h3 className='slide-highlight'>BLUE & WHITE</h3>
-            <h1 className='slide-title' style={{textAlign:"center"}}>Linen and denim</h1>
+            <h3 className='slide-highlight mb-3'>BLUE & WHITE</h3>
+            <h1 className='slide-title mb-4' style={{textAlign:"center"}}>Linen and denim</h1>
             <button className='slide-btn'>START SHOPPING</button>
           </div>
           </div>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
           <div className='slide-container third-slide carousel-image'>
-          <div className='slide-caption'></div>
+          <div className='slide-caption d-none d-sm-flex w-xs'></div>
           <div className='slide-caption' style={{alignItems:"start"}}>
-            <h3 className='slide-highlight'>SNEAKERS</h3>
-            <h1 className='slide-title'>For every occassion</h1>
+            <h3 className='slide-highlight mb-4' style={{color:"#BCAC76"}}>SNEAKERS</h3>
+            <h1 className='slide-title mb-5'>For every occassion</h1>
             <button className='slide-btn'>START SHOPPING</button>
           </div>
           </div>

@@ -91,7 +91,6 @@ table {
   z-index: 0;
 }
 
-
 .slide-container{
   display: flex;
   flex-direction: row;
@@ -103,7 +102,7 @@ table {
 .slide-caption{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   margin: 0 5rem;
 }
 
@@ -117,8 +116,8 @@ table {
 .slide-title{
   font-family: var(--bs-font-monospace);
   color: black;
-  letter-spacing: .1rem;
-  font-size: 5rem;
+  letter-spacing: .05rem;
+  font-size: 4.5rem;
   text-align: start;
 }
 
@@ -389,7 +388,7 @@ table {
  }
  
  .footer-list li {
-   font-size: 14px;
+   font-size: .875rem;
    color: rgb(134,142,153);
    font-weight: 600;
    margin-bottom: 1rem;
@@ -404,7 +403,7 @@ table {
  .footer-bottom {
    border: none;
    padding: 1.5rem 0;
-   font-size: 14px;
+   font-size: .875rem;
    text-align: center;
  }
  
@@ -421,5 +420,18 @@ table {
  
  .text-muted {
    color: #bbb !important;
+ }
+
+ @media(max-width: 575px){
+  .w-xs{
+    width: 92%;
+    margin: 0 4%;
+  }
+  .flex-xs-column{
+    flex-direction: column !important;
+  }
+  .d-xs-flex{
+    display: flex;
+  }
  }
  

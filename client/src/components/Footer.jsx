@@ -3,11 +3,12 @@ import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
+
    return (
-      <footer className="footer">
-         <Container style={{ padding: '96px 0' }}>
+      <footer className="footer w-xs">
+         <Container style={{ padding: '6rem 0' }}>
             <Row>
-               <Col md={5} style={{ paddingRight: '5rem' }}>
+               <Col lg={6} className='mb-5 pe-md-5'>
                   <h5 className="footer-title">Be in touch</h5>
                   <p className="footer-text">
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. At
@@ -35,8 +36,8 @@ const Footer = () => {
 
                   </InputGroup>
                </Col>
-               <Col md={2}>
-                  <h5 className="footer-title">Shop</h5>
+               <Col lg={2}>
+                  <h5 className="footer-title mt-2">Shop</h5>
                   <ul className="footer-list">
                      <li>For Women</li>
                      <li>For Men</li>
@@ -45,8 +46,8 @@ const Footer = () => {
                      <li>Shop</li>
                   </ul>
                </Col>
-               <Col md={2}>
-                  <h5 className="footer-title">Company</h5>
+               <Col lg={2}>
+                  <h5 className="footer-title mt-2">Company</h5>
                   <ul className="footer-list">
                      <li>Login</li>
                      <li>Register</li>
@@ -55,8 +56,8 @@ const Footer = () => {
                      <li>Checkouts</li>
                   </ul>
                </Col>
-               <Col md={2}>
-                  <h5 className="footer-title">Your account</h5>
+               <Col lg={2}>
+                  <h5 className="footer-title mt-2">Your account</h5>
                   <ul className="footer-list">
                      <li>Login</li>
                      <li>Register</li>
@@ -67,12 +68,13 @@ const Footer = () => {
                </Col>
             </Row>
          </Container>
-         <Container>
-            <Row className="footer-bottom">
+         <Container className='d-flex flex-column justify-content-center align-items-center'>
+            <Row className="footer-bottom d-flex flex-row flex-xs-column justify-content-center align-items-center w-100">
                <Col
-                  md={4}
-                  className="text-muted"
-                  style={{ justifyContent: 'start' }}
+                  lg={4}
+                  md={12}
+                  sm={12}
+                  className="text-muted d-flex justify-content-center align-items-center"
                >
                   <div
                      style={{
@@ -84,11 +86,11 @@ const Footer = () => {
                      &copy; 2025 Your company. All rights reserved.
                   </div>
                </Col>
-               <Col md={8} sm={12} className="text-end text-muted">
-                  <span>Terms & Conditions</span>
-                  <span>Privacy & cookies</span>
-                  <span>Accessibility</span>
-                  <span>Customer Data Promise</span>
+               <Col lg={8} md={12} sm={12} className="text-lg-end text-md-center text-muted">
+                  <span md={6}>Terms & Conditions</span>
+                  <span md={6}>Privacy & cookies</span>
+                  <span md={6}>Accessibility</span>
+                  <span md={6}>Customer Data Promise</span>
                </Col>
             </Row>
          </Container>

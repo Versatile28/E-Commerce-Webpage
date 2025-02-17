@@ -34,7 +34,7 @@ export default function CountdownSection () {
     <section className="deal-section d-flex align-items-center py-5">
       <Container>
         <Row className="deal-info align-items-center">
-          <Col xl={6} sm={12} md={12} className="m-md-0 mx-sm-1 mx-2">
+          <Col xl={6} sm={12} md={12} className="w-xs">
             <p className="text-danger text-uppercase fw-bold mb-1 mb-4">
               Deal of the Week
             </p>

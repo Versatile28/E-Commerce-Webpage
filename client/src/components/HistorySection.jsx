@@ -4,8 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 export default function HistorySection(){
   return (
     <section className="history-section">
-      <Container className="mx-md-0 mx-2">
-        <Row className="justify-content-center">
+      <Container>
+        <Row className="justify-content-center w-xs">
           <Col md={12}>
             <h5 className="section-title mb-4">OUR HISTORY</h5>
             <p className="mb-4">
