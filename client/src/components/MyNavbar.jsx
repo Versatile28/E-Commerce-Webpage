@@ -9,7 +9,7 @@ export default function MyNavbar() {
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar expand="lg" style={{zIndex:'1000'}}>
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="/">Varkala</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
@@ -50,7 +50,7 @@ export default function MyNavbar() {
           </Form>
         </Navbar.Collapse>
 
-        <Nav className="me-auto" style={{ width: "auto", display: 'flex', justifyContent: "center" }}>
+        <Nav className="me-auto d-none d-md-flex" style={{ width: "auto", display: 'flex', justifyContent: "center",flexDirection:"row" }}>
           <NavLink className="px-2">
             <svg xmlns="http://www.w3.org/2000/svg" stroke-width="1" width="25" height="25" viewBox="0 0 512 512"><path path fill="currentColor" d="m411.6 343.656l-72.823-47.334l27.455-50.334A80.23 80.23 0 0 0 376 207.681V128a112 112 0 0 0-224 0v79.681a80.236 80.236 0 0 0 9.768 38.308l27.455 50.333l-72.823 47.334A79.725 79.725 0 0 0 80 410.732V496h368v-85.268a79.727 79.727 0 0 0-36.4-67.076ZM416 464H112v-53.268a47.836 47.836 0 0 1 21.841-40.246l97.66-63.479l-41.64-76.341A48.146 48.146 0 0 1 184 207.681V128a80 80 0 0 1 160 0v79.681a48.146 48.146 0 0 1-5.861 22.985L296.5 307.007l97.662 63.479A47.836 47.836 0 0 1 416 410.732Z" /></svg>
           </NavLink>
@@ -67,7 +67,7 @@ export default function MyNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ border: "none" }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
         </Navbar.Toggle>
-        <Offcanvas className="overflow-auto" show={show} onHide={handleClose} placement="end" name="end" style={{ width: "31rem", display: "flex", justifyContent: "start", alignItems: "center" }}>
+        <Offcanvas className="overflow-auto d-none d-md-flex" show={show} onHide={handleClose} placement="end" name="end" style={{ width: "31rem", display: "flex", justifyContent: "start", alignItems: "center" }}>
           <div style={{ padding: "0 3rem", width: "100%" }}>
             <Offcanvas.Header closeButton></Offcanvas.Header>
             <Offcanvas.Title style={{ fontWeight: "700", paddingBottom: "3rem" }}>Varkala</Offcanvas.Title>

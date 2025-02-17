@@ -34,7 +34,7 @@ export default function CountdownSection () {
     <section className="deal-section d-flex align-items-center py-5">
       <Container>
         <Row className="deal-info align-items-center">
-          <Col xl={6} sm={12} md={12}>
+          <Col xl={6} sm={12} md={12} className="m-md-0 mx-sm-1 mx-2">
             <p className="text-danger text-uppercase fw-bold mb-1 mb-4">
               Deal of the Week
             </p>
@@ -50,23 +50,25 @@ export default function CountdownSection () {
             </Badge>
 
             {/* Countdown Display */}
-            <div className="countdown-box d-flex mb-4">
-              <div className="countdown-item">
+            <div className="countdown-container m-md-0 mr-4">
+            <div className="countdown-box d-flex m-0 mb-4 row flex-wrap">
+              <div className="countdown-item col-sm-6 col-lg-3 col-6">
                 <h3>{timeLeft.days}</h3>
                 <span>days</span>
               </div>
-              <div className="countdown-item">
+              <div className="countdown-item col-sm-6 col-lg-3 col-6">
                 <h3>{timeLeft.hours}</h3>
                 <span>hours</span>
               </div>
-              <div className="countdown-item">
+              <div className="countdown-item col-sm-6 col-lg-3 col-6">
                 <h3>{timeLeft.minutes}</h3>
                 <span>minutes</span>
               </div>
-              <div className="countdown-item">
+              <div className="countdown-item col-sm-6 col-lg-3 col-6">
                 <h3>{timeLeft.seconds}</h3>
                 <span>seconds</span>
               </div>
+            </div>
             </div>
 
             <Button className="btn">
