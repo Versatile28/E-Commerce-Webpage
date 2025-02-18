@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
-import { AiOutlineHeart, AiOutlineExpandAlt } from 'react-icons/ai';
+import { Card } from 'react-bootstrap';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { IoExpand } from "react-icons/io5";
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 
 export default function ProductCard({
@@ -31,43 +32,46 @@ export default function ProductCard({
    };
 
    return (
-      <div>
-         <Card
-            className="product-card"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-         >
-            {badgeText && (
-               <span className="badge-label">
-                  {badgeText}
-               </span>
-            )}
+         <div onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}>
+            <Card
+               className="product-card"
+            >
+               {badgeText && (
+                  <span className={`badge-label ${badgeText === 'Fresh' ? 'fresh' : ''} ${badgeText === 'Sale' ? 'sale' : ''} ${badgeText === 'Sold out' ? 'sold-out' : ''}`}>
+                     {badgeText}
+                  </span>
+               )}
 
-            <Card.Img
-               variant="top"
-               src={imageSrc}
-               alt={title}
-               className="product-image"
-            />
+               <Card.Img
+                  variant="top"
+                  src={imageSrc}
+                  alt={title}
+                  className="product-image"
+               />
 
-            <div className={`hover-overlay ${hovered ? 'show' : ''}`}>
-               <div className="overlay-content">
-                  <Button variant="dark" size="sm">
-                     Add to cart
-                  </Button>
-                  <AiOutlineHeart className="icon" />
-                  <AiOutlineExpandAlt className="icon" />
-                  <div className="star-rating">
+               <div className={`hover-overlay ${hovered ? 'show' : ''}`}>
+                  <div className="overlay-content">
+                     <p className='product-cart' style={{ fontSize: ".9rem", fontWeight: "600" }}>
+                        Add to cart
+                     </p>
+                     <div>
+                        <AiOutlineHeart className="icon" />
+                        <IoExpand className="icon" />
+                     </div>
+                  </div>
+               </div>
+            </Card>
+
+            <div>
+               <a href='/' className='card-title mt-3'>{title}</a>
+               <div className='d-flex justify-content-between mt-2'>
+                  <p className="text-muted product-price">${price.toFixed(2)}</p>
+                  <div className={`star-rating ${hovered ? 'show' : ''}`}>
                      {renderStars()}
                   </div>
                </div>
             </div>
-         </Card>
-
-         <div>
-            <span>{title}</span>
-            <p className="text-muted">${price.toFixed(2)}</p>
          </div>
-      </div>
    );
 }

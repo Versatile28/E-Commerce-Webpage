@@ -237,24 +237,68 @@ table {
    font-weight: 500;
  }
 
+
  /* Product Section */
+
+ .product-links{
+   color: #868E96;
+   font-size: 1rem;
+   font-weight: 600;
+   text-decoration: none;
+ }
+
+ .product-links:hover{
+   text-decoration: underline;
+ }
+
+ .product-link-a{
+   font-family: var(--bs-font-monospace);
+   letter-spacing: .2rem;
+   font-weight: 600;
+   font-size: 1rem;
+   text-decoration: none;
+   color: #BCAC76;
+
+ }
+
+ .product-link-a:hover{
+   color: #968A5E;
+   text-decoration: underline;
+ }
 
  .product-card {
    position: relative;
    overflow: hidden;
    border: none;
+   margin-bottom: .8rem;
+ }
+
+ .card{
+   border-radius: 0 !important;
  }
  
  .badge-label {
    position: absolute;
    top: 10px;
    left: 10px;
-   background-color: #8c7e5c;
    color: #fff;
    padding: 5px 10px;
    font-size: 0.85rem;
+   font-weight: 700;
    border-radius: 4px;
    z-index: 2;
+ }
+
+ .fresh{
+   background-color: #877F64;
+ }
+
+ .sale{
+   background-color: #BCAC76;
+ }
+
+ .sold-out{
+   background-color: #212529;
  }
 
  .product-image {
@@ -262,21 +306,24 @@ table {
    height: 17.5rem;
  }
 
+ .product-price{
+   font-family: var(--bs-font-monospace);
+ }
+
  .hover-overlay {
    position: absolute;
    bottom: 0;
    left: 0;
    width: 100%;
-   height: 20%;
-   background: rgba(255, 255, 255, 0.6);
+   background: rgba(255, 255, 255, 0.95);
    opacity: 0;
    transform: translateY(100%);
-   transition: all 0.3s ease;
+   transition: all 0.4s ease;
    z-index: 3;
    display: flex;
    align-items: end;
    justify-content: center;
-   padding-bottom: 10px;
+   font-weight: 500;
  }
  
  .hover-overlay.show {
@@ -285,10 +332,13 @@ table {
  }
 
  .overlay-content {
+   width: 100%;
+   margin: .8rem .8rem;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    align-items: center;
-   gap: 0.5rem;
+   justify-content: space-between;
+   gap: 1rem;
  }
 
  .overlay-content .icon {
@@ -296,10 +346,34 @@ table {
    cursor: pointer;
  }
 
+ .product-cart:hover{
+   text-decoration: underline;
+ }
+
+ .card-title{
+   font-family: var(--bs-body-font-family);
+   font-size: .85rem;
+   font-weight: 900;
+   text-decoration: none;
+ }
+
+ .card-title:hover{
+   text-decoration: underline;
+ }
+
  .star-rating {
    display: flex;
    gap: 2px;
-   font-size: 1rem;
+   font-size: .8rem;
+   color: #BCAC76;
+   opacity: 0;
+   transform: translateY('5rem');
+ }
+
+ .star-rating.show{
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 0.4s ease-in;
  }
  
 
