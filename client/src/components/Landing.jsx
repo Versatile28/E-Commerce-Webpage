@@ -8,6 +8,7 @@ import HistorySection from './HistorySection'
 import NewArrivalsSection from './NewArrivalsSection'
 import CountdownSection from './CountdownSection'
 import CatagorySection from './CatagorySection'
+import BrandSection from './BrandSection'
 
 export default function Landing() {
   return (
@@ -23,6 +24,7 @@ export default function Landing() {
         <NewArrivalsSection/>
         <CountdownSection/>
         <HistorySection/>
+        <BrandSection/>
         <FeatureSection/>
         <Footer/>
     </div>
