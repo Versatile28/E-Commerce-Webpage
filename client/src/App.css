@@ -237,6 +237,72 @@ table {
    font-weight: 500;
  }
 
+ /* Product Section */
+
+ .product-card {
+   position: relative;
+   overflow: hidden;
+   border: none;
+ }
+ 
+ .badge-label {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   background-color: #8c7e5c;
+   color: #fff;
+   padding: 5px 10px;
+   font-size: 0.85rem;
+   border-radius: 4px;
+   z-index: 2;
+ }
+
+ .product-image {
+   object-fit: cover;
+   height: 17.5rem;
+ }
+
+ .hover-overlay {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 20%;
+   background: rgba(255, 255, 255, 0.6);
+   opacity: 0;
+   transform: translateY(100%);
+   transition: all 0.3s ease;
+   z-index: 3;
+   display: flex;
+   align-items: end;
+   justify-content: center;
+   padding-bottom: 10px;
+ }
+ 
+ .hover-overlay.show {
+   opacity: 1;
+   transform: translateY(0);
+ }
+
+ .overlay-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.5rem;
+ }
+
+ .overlay-content .icon {
+   font-size: 1.2rem;
+   cursor: pointer;
+ }
+
+ .star-rating {
+   display: flex;
+   gap: 2px;
+   font-size: 1rem;
+ }
+ 
+
  /* CountdownSection */
 
  .deal-section {
