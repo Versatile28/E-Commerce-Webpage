@@ -22,7 +22,6 @@ export default function CatagorySection() {
      <Col xs={12} sm={6}>
        <div className="image-container">
          <a href="/men">
-           {/* Replace with your actual men image source */}
            <img
              src="images/category-men.webp"
              alt="Men"

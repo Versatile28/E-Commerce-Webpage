@@ -2,29 +2,28 @@ import React, { useState, useMemo } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const brandLogos = [
-  { id: 1, src: '/images/brand/brand-1.svg', alt: 'Brand 1' },
-  { id: 2, src: '/images/brand/brand-2.svg', alt: 'Brand 2' },
-  { id: 3, src: '/images/brand/brand-3.svg', alt: 'Brand 3' },
-  { id: 4, src: '/images/brand/brand-4.svg', alt: 'Brand 4' },
-  { id: 5, src: '/images/brand/brand-5.svg', alt: 'Brand 5' },
-  { id: 6, src: '/images/brand/brand-6.svg', alt: 'Brand 6' },
+   { id: 1, src: '/images/brand/brand-1.svg', alt: 'Brand 1' },
+   { id: 2, src: '/images/brand/brand-2.svg', alt: 'Brand 2' },
+   { id: 3, src: '/images/brand/brand-3.svg', alt: 'Brand 3' },
+   { id: 4, src: '/images/brand/brand-4.svg', alt: 'Brand 4' },
+   { id: 5, src: '/images/brand/brand-5.svg', alt: 'Brand 5' },
+   { id: 6, src: '/images/brand/brand-6.svg', alt: 'Brand 6' },
 ];
 
 export default function BrandSection() {
 
    const track = useMemo(() => [...brandLogos, ...brandLogos], []);
    const [currentIndex, setCurrentIndex] = useState(0);
-   
- 
+
+
    const offsetPercentage = currentIndex * 20;
 
-  return (
-    <div
-      className="position-relative"
-      style={{
-         marginBottom:"5rem",
-        maxWidth: '100vw',
-        margin: '0 auto',
+   return (
+      <div
+         className="position-relative"
+         style={{
+            marginBottom:"6rem",
+               maxWidth: '100vw',
       }}
     >
       <Container fluid style={{ overflow: 'hidden' }}>
@@ -56,7 +55,7 @@ export default function BrandSection() {
         </Row>
       </Container>
 
-      <div className="d-flex align-items-center justify-content-center mt-3">
+      <div className="d-flex align-items-center justify-content-center mt-3" style={{height:"1rem"}}>
         {Array.from({ length: 6 }).map((_, i) => {
           let size = "small";
 
@@ -74,13 +73,13 @@ export default function BrandSection() {
               onClick={() => setCurrentIndex(i)}
               className={`dot ${size}`}
               style={{
-                margin: '0 5px',
+                margin: '5px 5px',
                 cursor: 'pointer',
               }}
             />
           );
         })}
       </div>
-    </div>
+    </div >
   );
 }
