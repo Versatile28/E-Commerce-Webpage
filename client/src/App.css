@@ -60,6 +60,46 @@ table {
   margin: 0px
 }
 
+/* NavBar */
+
+.drop {
+   position: absolute;
+   top: 100%;
+   width: 13.1rem;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(20px);
+   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.drop.show {
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+}
+
+.drop.hide {
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(20px) translateX(70px);
+}
+
+
+.option{
+   text-decoration: none;
+   color:#999999;
+   font-weight: 600;
+}
+
+.home-color:hover{
+   color: black;
+}
+
+.padd-0{
+   padding-right: 0 !important;
+   padding-left: 0 !important;
+}
+
 /* HeroCarousel */
 
 .carousel-image{
